@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Olá mundo! Bem-vindo ao meu projeto Django</h1>
+    {% if latest_question_list %}
+        <ul>
+            {% for question in latest_question_list %}
+            <li>
+                <a href="/polls/{{qiestion.id}}/">{{question.question_text}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+    <p>No polls are Available</p>
+    {% endif %}
+
+</body>
+</html>
